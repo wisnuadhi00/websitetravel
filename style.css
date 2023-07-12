@@ -1,0 +1,547 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300&display=swap");
+
+:root {
+  --background: #5aa2ff;
+  --color-1: #222;
+  --color-2: #fff;
+  --shadow: 5px 5px rgba(0, 0, 0, 0.3);
+  --border: 2px solid #222;
+}
+
+* {
+  border: none;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 80%;
+}
+
+h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+nav {
+  background: transparent;
+  z-index: 1000;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 0 5rem;
+  position: absolute;
+}
+
+nav .navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: bolder;
+  padding: 1rem 0;
+}
+
+nav .navbar-content {
+  display: flex;
+  gap: 2rem;
+}
+
+nav .navbar-content a {
+  font-size: 1.5rem;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+nav .dropdown {
+  overflow: hidden;
+  padding: 1rem 0;
+}
+
+nav .dropdown .dropbtn {
+  color: var(--color-2);
+  outline: none;
+  text-decoration: none;
+  background: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+nav .navbar-content a:hover,
+.dropdown:hover .dropbtn {
+  color: #222;
+}
+
+.dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background: #f5f5f5;
+  min-width: 200px;
+  box-shadow: var(--shadow);
+  z-index: 1;
+  margin-top: 1rem;
+}
+
+.dropdown .dropdown-content a {
+  color: #222;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown .dropdown-content a:hover {
+  background: #444;
+  color: #fff;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* home */
+
+.home {
+  height: 70vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(6, 6, 32, 0.623), rgba(0, 0, 0, 0.555)),
+    url(image/pexels-asad-photo-maldives-3601425.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.home .home-container {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.5;
+  display: block;
+  padding: 13% 5% 0 5%;
+}
+
+.home .home-container h1 {
+  font-size: 4rem;
+  color: var(--color-2);
+  text-shadow: var(--shadow);
+}
+
+.home .home-container p {
+  font-size: 1.3rem;
+  color: var(--color-2);
+  margin-bottom: 2rem;
+}
+
+.home .home-container a {
+  font-size: 1.5rem;
+  color: var(--color-2);
+  background: #465cda;
+  padding: 0.7rem 2rem;
+  border-radius: 0.5rem;
+}
+
+.home .home-container a:hover {
+  background: #576ef1;
+}
+
+/* category */
+
+.category {
+  margin-top: 3rem;
+  padding: 0 5rem;
+  margin-bottom: 3rem;
+}
+
+.category .category-container {
+  align-items: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.category .category-container a {
+  padding: 1rem 2rem;
+  background: var(--color-1);
+  color: var(--color-2);
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.category .category-container a:hover {
+  background: #444;
+}
+
+/* rekomendasi */
+
+.rekomendasi {
+  margin-top: 2rem;
+  padding: 0 5rem;
+}
+
+.rekomendasi .rekomendasi-container {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.rekomendasi .rekomendasi-container .image-content {
+  width: 250px;
+  position: relative;
+}
+
+.rekomendasi .rekomendasi-container .image-content img {
+  width: 100%;
+  height: auto;
+}
+
+.rekomendasi-container .image-content .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.555);
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: 0.5s ease;
+}
+
+.rekomendasi-container .image-content:hover .overlay {
+  height: 100%;
+}
+
+.rekomendasi-container .image-content .overlay h1 {
+  color: white;
+  font-size: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* destinasi */
+
+.destinasi {
+  margin-top: 5rem;
+  padding: 0 5rem;
+}
+
+.destinasi .destinasi-container {
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+.destinasi .destinasi-container .destinasi-image {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.destinasi .destinasi-container .destinasi-content {
+  line-height: 1.5;
+  text-align: left;
+}
+
+.destinasi .destinasi-container .destinasi-image img {
+  width: 27rem;
+  height: auto;
+}
+
+.destinasi .destinasi-container .destinasi-content h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--color-1);
+}
+
+.destinasi .destinasi-container .destinasi-content p {
+  font-size: 1.5rem;
+  color: var(--color-1);
+  margin-bottom: 2rem;
+}
+
+.destinasi .destinasi-container .destinasi-content a {
+  color: var(--color-2);
+  font-size: 1.5rem;
+  text-decoration: none;
+  background: #465cda;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow);
+}
+
+/* Tentang */
+
+.about {
+  margin-top: 5rem;
+  padding: 0 5rem;
+}
+
+.about .about-container {
+  align-items: center;
+  justify-content: center;
+  line-height: 1.5;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about .about-container .about-img {
+  width: 45rem;
+  height: auto;
+  margin: auto;
+}
+
+.about .about-container .about-img img {
+  width: 100%;
+  height: auto;
+}
+
+.about .about-container .about-content {
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.about .about-container .about-content p {
+  font-size: 1.5rem;
+  color: var(--color-1);
+}
+
+/* blog */
+
+.blog {
+  margin-top: 5rem;
+  padding: 0 5rem;
+}
+
+.blog .blog-container {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.blog .blog-container .blog-content {
+  width: 400px;
+  position: relative;
+  line-height: 1.5;
+  background: #f5f5f5;
+  box-shadow: var(--shadow);
+}
+
+.blog .blog-container .blog-content img {
+  width: 100%;
+  height: auto;
+}
+
+.blog .blog-container .blog-content h3 {
+  font-size: 1.5rem;
+  color: var(--color-1);
+  padding: 0 1rem;
+}
+
+.blog .blog-container .blog-content p {
+  font-size: 1.3rem;
+  color: var(--color-1);
+  padding: 1rem;
+}
+
+.blog .blog-container .blog-content a {
+  font-size: 1.3rem;
+  padding: 1rem;
+}
+
+.blog .blog-container .blog-content a:hover {
+  text-decoration: underline;
+}
+
+/* contact */
+
+.contact {
+  margin-top: 5rem;
+  padding: 0 5rem;
+}
+
+.contact .contact-container {
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  padding: 1rem;
+  margin: auto;
+}
+
+.contact .contact-container input {
+  display: block;
+  border: var(--border);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  color: var(--color-1);
+}
+
+.contact .contact-container #message {
+  font-size: 1.5rem;
+  color: var(--color-1);
+  border: var(--border);
+  padding: 0.5rem;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.contact .contact-container .btn-contact {
+  text-align: center;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.contact .contact-container a {
+  background: #465cda;
+  font-size: 2rem;
+  color: var(--color-2);
+  border-radius: 0.5rem;
+  padding: 0.5rem 2rem;
+}
+
+.contact .contact-container a:hover {
+  background: #576ef1;
+}
+
+/* footer */
+
+.footer {
+  margin-top: 5rem;
+  background-color: #222;
+}
+
+.footer .footer-container {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.footer .footer-container h2 {
+  font-size: 2rem;
+  color: var(--color-2);
+  font-weight: bolder;
+}
+
+.footer .footer-container p {
+  font-size: 1.3rem;
+  color: var(--color-2);
+  margin-bottom: 2rem;
+}
+
+.footer .footer-container .footer-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  color: var(--color-2);
+}
+
+.footer .footer-container .footer-link a {
+  font-size: 1.5rem;
+  color: var(--color-2);
+}
+
+.footer .footer-container .footer-sosmed {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 2rem;
+}
+
+.footer .footer-container .footer-sosmed img {
+  width: 3rem;
+  margin-bottom: 2rem;
+}
+
+.footer .footer-by {
+  background: #000;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.footer .footer-by p {
+  color: var(--color-2);
+  font-size: 1.3rem;
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 65.5%;
+  }
+
+  .home {
+    height: 60vh;
+  }
+}
+
+@media (max-width: 758px) {
+  html {
+    font-size: 55%;
+  }
+
+  nav .navbar-content a,
+  .dropdown {
+    display: none;
+  }
+
+  .home .home-container {
+    padding: 13rem 3rem;
+  }
+}
+
+@media (max-width: 579px) {
+  html {
+    font-size: 50%;
+  }
+
+  .home .home-container {
+    padding: 12rem 3rem;
+  }
+
+  .category-container {
+    flex-wrap: wrap;
+  }
+
+  .rekomendasi-container {
+    flex-wrap: wrap;
+  }
+
+  .rekomendasi .rekomendasi-container .image-content {
+    width: 200px;
+  }
+
+  .destinasi .destinasi-container .destinasi-image {
+    flex-wrap: wrap;
+    margin-bottom: 5rem;
+  }
+
+  .blog .blog-container {
+    flex-wrap: wrap;
+  }
+
+  .footer-link {
+    flex-wrap: wrap;
+  }
+}
